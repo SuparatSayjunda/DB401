@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'location.dart';
 
 class Report extends StatefulWidget {
   const Report({super.key});
@@ -8,6 +9,13 @@ class Report extends StatefulWidget {
 }
 
 class _reportState extends State<Report> {
+  @override
+  void initState() {
+    getCurrentLocation().then((value) => print(value));
+    // TODO: implement initState
+    super.initState();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Column(
